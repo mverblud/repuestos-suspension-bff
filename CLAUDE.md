@@ -47,8 +47,8 @@ Los nombres de las propiedades deben coincidir exactamente con las claves regist
 1. Model/params en `src/domain/models/` si es un dominio nuevo
 2. Port out en `src/application/ports/I<Repo>.ts`
 3. Port in en `src/application/ports/I<UseCase>.ts`
-4. Use case en `src/application/use-cases/<NombreUseCase>.ts` + `.spec.ts` co-ubicado
-5. Adapter en `src/infrastructure/adapters/<Nombre>Adapter.ts` + `.spec.ts` co-ubicado
+4. Use case en `src/application/use-cases/<NombreUseCase>.ts`; test en `test/application/use-cases/<NombreUseCase>.spec.ts`
+5. Adapter en `src/infrastructure/adapters/<Nombre>Adapter.ts`; test en `test/infrastructure/adapters/<Nombre>Adapter.spec.ts`
 6. Controller + route en `src/infrastructure/http/`
 7. Registrar todo en `src/infrastructure/config/container.ts`
 

@@ -1,9 +1,12 @@
 export interface Producto {
+  codigo: string;
+  marca: string;
+  categoria: string;
   descripcion: string;
-  codigo?: string;
-  precio?: number;
-  marca?: string;
-  disponible?: boolean;
+  precioVenta: number;
+  foto?: string;
+  stock?: number;
+  fuente: 'ramos' | 'asm';
 }
 
 export interface BuscarProductosParams {

@@ -1,0 +1,8 @@
+[
+  {
+    "rubroId": 1,
+    "nombre": "Amortiguadores",
+    "servicioA": { "rubroId": "10", "rubroName": "amortiguador" },
+    "servicioB": { "categoria": "AMORTIGUADORES" }
+  }
+]
