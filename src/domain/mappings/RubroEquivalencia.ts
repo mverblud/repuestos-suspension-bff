@@ -1,6 +1,14 @@
+export interface ProveedorRubroEquivalencia {
+  rubroId: number;
+  rubroName: string;
+}
+
 export interface RubroEquivalencia {
   rubroId: number;
-  nombre: string;
-  servicioA: { rubroId: string; rubroName: string };
-  servicioB: { categoria: string };
+  rubroName: string;
+  rubroHabilitado: boolean;
+  rubroEquivalencias: {
+    RM: ProveedorRubroEquivalencia | null;
+    ASM: ProveedorRubroEquivalencia | null;
+  };
 }

@@ -1,0 +1,527 @@
+[
+  {
+    "rubroId": 1,
+    "rubroName": "ABRAZADERA DE CAJA DE DIRECCION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 2,
+    "rubroName": "ABRAZADERA DE EJE DE PARRILLA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 3,
+    "rubroName": "ABRAZADERA DE HOMICINETICA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 4,
+    "rubroName": "ABRAZADERA DE SUSPENSION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 5,
+    "rubroName": "ACOPLE DE CREMALLERA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 6,
+    "rubroName": "ACOPLE DE DIRECCION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 7,
+    "rubroName": "ACOPLE TENSOR",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 8,
+    "rubroName": "ACTUADORES HIDRAULICOS",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 9,
+    "rubroName": "AISLADOR DE CARROCERIA",
+    "rubroHabilitado": false
+  },
+  {
+    "rubroId": 10,
+    "rubroName": "AMORTIGUADOR",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 11,
+    "rubroName": "AMORTIGUADOR ESTABILIZADOR",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 12,
+    "rubroName": "AMORTIGUADOR RALLY",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 13,
+    "rubroName": "ARANDELA JUNTA HOMOCINETA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 14,
+    "rubroName": "AXIAL DE CREMALLERA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 15,
+    "rubroName": "BARRA DE DIRECCION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 16,
+    "rubroName": "BARRA TENSORA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 17,
+    "rubroName": "BASE DE ESPIRAL",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 18,
+    "rubroName": "BIELETA DE SUSPENSION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 19,
+    "rubroName": "BOCINA CARBURADOR",
+    "rubroHabilitado": false
+  },
+  {
+    "rubroId": 20,
+    "rubroName": "BOMBA DE AGUA",
+    "rubroHabilitado": false
+  },
+  {
+    "rubroId": 21,
+    "rubroName": "BOMBA DE EMBRAGUE",
+    "rubroHabilitado": false
+  },
+  {
+    "rubroId": 22,
+    "rubroName": "BOMBA DE FRENO",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 23,
+    "rubroName": "BOMBA DIRECCION HIDRAULICA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 24,
+    "rubroName": "BRAZO AUXILIAR DE DIRECCION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 25,
+    "rubroName": "BRAZO DE ROTULA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 26,
+    "rubroName": "BRAZO PITMAN DE DIRECCION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 27,
+    "rubroName": "BRAZO SUSPENSION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 28,
+    "rubroName": "BUJE DE SUSPENSION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 29,
+    "rubroName": "BULON DE EJE DE PARRILLA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 30,
+    "rubroName": "CABLE DE EMBRAGUE",
+    "rubroHabilitado": false
+  },
+  {
+    "rubroId": 31,
+    "rubroName": "CABLE DE FRENO",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 32,
+    "rubroName": "CABLE SELECTORA DE CAMBIOS",
+    "rubroHabilitado": false
+  },
+  {
+    "rubroId": 33,
+    "rubroName": "CAJA DE DIRECCION (PICK UP)",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 34,
+    "rubroName": "CAJA DE DIRECCION REPARADA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 35,
+    "rubroName": "CAMPANA DE FRENO",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 36,
+    "rubroName": "CAZOLETA DE SUSPENSION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 37,
+    "rubroName": "CILINDRO DE RUEDA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 38,
+    "rubroName": "COLUMNA DE DIRECCION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 39,
+    "rubroName": "CORREAS POLY-V",
+    "rubroHabilitado": false
+  },
+  {
+    "rubroId": 40,
+    "rubroName": "CORREAS POLY-V ELASTICAS",
+    "rubroHabilitado": false
+  },
+  {
+    "rubroId": 41,
+    "rubroName": "CORREAS TRAPEZOIDALES",
+    "rubroHabilitado": false
+  },
+  {
+    "rubroId": 42,
+    "rubroName": "CRAPODINA DE SUSPENSION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 43,
+    "rubroName": "CAJA DIR. ELEC. ASIST.",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 44,
+    "rubroName": "CAJA DIR. HIDRAULICA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 45,
+    "rubroName": "CAJA DIR. MECANICA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 46,
+    "rubroName": "CAJA DIR. REPARADA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 47,
+    "rubroName": "CRUCETA DE CARDAN",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 48,
+    "rubroName": "CRUCETA DE DIRECCION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 49,
+    "rubroName": "DESPIECE CAJA DE DIRECCION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 50,
+    "rubroName": "DISCO DE FRENO",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 51,
+    "rubroName": "EJE DE PARRILLA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 52,
+    "rubroName": "ELASTICO",
+    "rubroHabilitado": false
+  },
+  {
+    "rubroId": 53,
+    "rubroName": "EMBRAGUE KIT",
+    "rubroHabilitado": false
+  },
+  {
+    "rubroId": 54,
+    "rubroName": "EQUILIBRADOR DE BAUL Y COMPUERTA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 55,
+    "rubroName": "ESPIGA DE SEMIEJE",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 56,
+    "rubroName": "EXTREMO DE DIRECCION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 57,
+    "rubroName": "FUELLE DE AMORTIGUADOR",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 58,
+    "rubroName": "FUELLE DE CARDAN",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 59,
+    "rubroName": "FUELLE DE CREMALLERA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 60,
+    "rubroName": "FUELLE DE SEMIEJE",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 61,
+    "rubroName": "GRASA SEMIEJE",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 62,
+    "rubroName": "JUNTA DESLIZANTE",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 63,
+    "rubroName": "JUNTA HOMOCINETICA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 64,
+    "rubroName": "KIT DE BUJES DE SUSPENSION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 65,
+    "rubroName": "KIT DE DISTRIBUCION",
+    "rubroHabilitado": false
+  },
+  {
+    "rubroId": 66,
+    "rubroName": "MANCHON DE CARDAN",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 67,
+    "rubroName": "MANCHON DE DIRECCION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 68,
+    "rubroName": "MAZA DE RUEDA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 69,
+    "rubroName": "MONTANTE DE EJE DE PARRILLA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 70,
+    "rubroName": "PALIER",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 71,
+    "rubroName": "PALIER FLOTANTE",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 72,
+    "rubroName": "PARRILLA DE SUSPENSION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 73,
+    "rubroName": "PASTILLA DE FRENO",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 74,
+    "rubroName": "PLATO AMORTIGUADOR-ESPIRAL",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 75,
+    "rubroName": "POLEA BOMBA DE AGUA",
+    "rubroHabilitado": false
+  },
+  {
+    "rubroId": 76,
+    "rubroName": "POLEA CIGUEÑAL",
+    "rubroHabilitado": false
+  },
+  {
+    "rubroId": 77,
+    "rubroName": "PUNTA (MANGA DIFERENCIAL)",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 78,
+    "rubroName": "PUNTA DE EJE",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 79,
+    "rubroName": "REGULADOR DE COMBA",
+    "rubroHabilitado": false
+  },
+  {
+    "rubroId": 80,
+    "rubroName": "REPARACION EJE TRAS (TORRINGTON)",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 81,
+    "rubroName": "RESORTE DE SUSPENSION PROGRESIVO",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 82,
+    "rubroName": "RESORTE DE SUSPENSION RALLY",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 83,
+    "rubroName": "RESORTE DE SUSPENSION STANDART",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 84,
+    "rubroName": "RODAMIENTO DE RUEDA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 85,
+    "rubroName": "RODAMIENTO DE SEMIEJE",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 86,
+    "rubroName": "ROTULA DE SUSPENSION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 87,
+    "rubroName": "Rubro",
+    "rubroHabilitado": false
+  },
+  {
+    "rubroId": 88,
+    "rubroName": "SECTOR DE DIRECCION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 89,
+    "rubroName": "SEGURO DE ROTULA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 90,
+    "rubroName": "SEMIEJE",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 91,
+    "rubroName": "SINFIN DE DIRECCION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 92,
+    "rubroName": "SOPORTE ADON VARIOS",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 93,
+    "rubroName": "SOPORTE CAÑO DE ESCAPE",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 94,
+    "rubroName": "SOPORTE DE AMORTIGUADOR",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 95,
+    "rubroName": "SOPORTE DE CABINA Y CARROCERIA",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 96,
+    "rubroName": "SOPORTE DE CARDAN",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 97,
+    "rubroName": "SOPORTE DE ELASTICO",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 98,
+    "rubroName": "SOPORTE DE MOTOR / CAJA / DIFERENCIAL",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 99,
+    "rubroName": "SOPORTE DE RADIDADOR",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 100,
+    "rubroName": "TENSOR DE SUSPENSION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 101,
+    "rubroName": "TOPE DE SUSPENSION",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 102,
+    "rubroName": "TRICETA DE SEMIEJE",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 103,
+    "rubroName": "TUBO EJE TRASERO",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 104,
+    "rubroName": "TUERCAS VARIAS",
+    "rubroHabilitado": true
+  },
+  {
+    "rubroId": 1000,
+    "rubroName": "SIN RUBRO",
+    "rubroHabilitado": false
+  }
+]

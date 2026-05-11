@@ -5,7 +5,7 @@ import type { IAsmProductoRepository } from '../ports/IAsmProductoRepository';
 import type { RubroEquivalencia } from '../../domain/mappings/RubroEquivalencia';
 import rubroEquivalenciasJson from '../../domain/mappings/rubroEquivalencias.json';
 
-const equivalencias = rubroEquivalenciasJson as RubroEquivalencia[];
+const equivalencias = rubroEquivalenciasJson as unknown as RubroEquivalencia[];
 
 export class ObtenerProductosSuspensionUseCase implements IObtenerProductosUseCase {
   private readonly ramosProductoRepository: IRamosProductoRepository;
@@ -28,17 +28,27 @@ export class ObtenerProductosSuspensionUseCase implements IObtenerProductosUseCa
       throw new Error(`Rubro ${params.rubroId} no tiene equivalencia configurada`);
     }
 
-    const [productosRamos, productosAsm] = await Promise.all([
-      this.ramosProductoRepository.obtenerProductos({
-        ...params,
-        rubroId: Number(equiv.servicioA.rubroId),
-      }),
-      this.asmProductoRepository.obtenerProductos({
-        codigoAuto: params.codigoAuto,
-        categoria: equiv.servicioB.categoria,
-      }),
-    ]);
+    const promises: Promise<Producto[]>[] = [];
 
-    return [...productosRamos, ...productosAsm];
+    if (equiv.rubroEquivalencias.RM !== null) {
+      promises.push(
+        this.ramosProductoRepository.obtenerProductos({
+          ...params,
+          rubroId: equiv.rubroEquivalencias.RM.rubroId,
+        }),
+      );
+    }
+
+    if (equiv.rubroEquivalencias.ASM !== null) {
+      promises.push(
+        this.asmProductoRepository.obtenerProductos({
+          codigoAuto: params.codigoAuto,
+          categoria: equiv.rubroEquivalencias.ASM.rubroName,
+        }),
+      );
+    }
+
+    const resultados = await Promise.all(promises);
+    return resultados.flat();
   }
 }

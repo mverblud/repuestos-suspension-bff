@@ -45,8 +45,12 @@ describe('ObtenerProductosSuspensionUseCase', () => {
 
     const result = await useCase.execute(params);
 
-    expect(ramosProductoRepository.obtenerProductos).toHaveBeenCalledWith(params);
-    expect(asmProductoRepository.obtenerProductos).toHaveBeenCalledWith(params);
+    // rubroId=1 → rm=10 (Amortiguadores), asm=3 → rubroName "AMORTIGUADORES"
+    expect(ramosProductoRepository.obtenerProductos).toHaveBeenCalledWith({ ...params, rubroId: 10 });
+    expect(asmProductoRepository.obtenerProductos).toHaveBeenCalledWith({
+      codigoAuto: params.codigoAuto,
+      categoria: 'AMORTIGUADORES',
+    });
     expect(result).toEqual([productoRamos, productoAsm]);
   });
 

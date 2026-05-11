@@ -1,5 +1,7 @@
 import { RamosAdapter } from '../../../src/infrastructure/adapters/RamosAdapter';
+import { RamosClient } from '../../../src/infrastructure/adapters/RamosClient';
 import { request } from 'undici';
+import type { IAuthService } from '../../../src/application/ports/IAuthService';
 import type { BuscarProductosParams } from '../../../src/domain/models/Producto';
 import type { RamosProductoRaw } from '../../../src/infrastructure/adapters/mappers/productoRamosMapper';
 
@@ -15,9 +17,13 @@ describe('RamosAdapter', () => {
     cantidadRenglones: 10,
   };
 
+  const ramosAuthService: IAuthService = {
+    getToken: jest.fn().mockResolvedValue('mock-token'),
+  };
+
   beforeEach(() => jest.clearAllMocks());
 
-  it('should POST to scraper endpoint and return mapped products', async () => {
+  it('should POST to scraper endpoint with auth header and return mapped products', async () => {
     const raw: RamosProductoRaw[] = [
       {
         codigo: 'P001',
@@ -29,15 +35,20 @@ describe('RamosAdapter', () => {
         precioSugerido: 1500,
       },
     ];
-    const mockBody = { json: jest.fn().mockResolvedValue(raw) };
+    const mockBody = { json: jest.fn().mockResolvedValue({ params: {}, totalProductos: 1, productos: raw }) };
     mockRequest.mockResolvedValue({ body: mockBody } as unknown as Awaited<ReturnType<typeof request>>);
 
-    const adapter = new RamosAdapter({ ramosBaseUrl: 'http://localhost:3001' });
+    const ramosClient = new RamosClient({ ramosBaseUrl: 'http://localhost:3001', ramosAuthService });
+    const adapter = new RamosAdapter({ ramosClient });
     const result = await adapter.obtenerProductos(params);
 
+    expect(ramosAuthService.getToken).toHaveBeenCalledTimes(1);
     expect(mockRequest).toHaveBeenCalledWith('http://localhost:3001/scraper/productos', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer mock-token',
+      },
       body: JSON.stringify(params),
     });
 

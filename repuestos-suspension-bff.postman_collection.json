@@ -8,6 +8,11 @@
       "key": "baseUrl",
       "value": "http://localhost:3000",
       "type": "string"
+    },
+    {
+      "key": "ramosBaseUrl",
+      "value": "http://localhost:3001",
+      "type": "string"
     }
   ],
   "item": [
@@ -32,6 +37,107 @@
             "body": {
               "mode": "raw",
               "raw": "{\n  \"codigoAuto\": \"ABC123\",\n  \"marcaId\": 1,\n  \"rubroId\": 2,\n  \"cantidadRenglones\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Rubros",
+      "item": [
+        {
+          "name": "Obtener todos los rubros",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/rubros",
+              "host": ["{{baseUrl}}"],
+              "path": ["rubros"]
+            }
+          }
+        },
+        {
+          "name": "Obtener rubros habilitados",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/rubros?soloHabilitados=true",
+              "host": ["{{baseUrl}}"],
+              "path": ["rubros"],
+              "query": [
+                {
+                  "key": "soloHabilitados",
+                  "value": "true"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Autos",
+      "item": [
+        {
+          "name": "Obtener todas las marcas y modelos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/cars",
+              "host": ["{{baseUrl}}"],
+              "path": ["cars"]
+            }
+          }
+        },
+        {
+          "name": "Obtener solo habilitados",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/cars?onlyEnabled=true",
+              "host": ["{{baseUrl}}"],
+              "path": ["cars"],
+              "query": [
+                {
+                  "key": "onlyEnabled",
+                  "value": "true"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ramos (servicio externo)",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{ramosBaseUrl}}/auth/login",
+              "host": ["{{ramosBaseUrl}}"],
+              "path": ["auth", "login"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"lapassw0rd\"\n}",
               "options": {
                 "raw": {
                   "language": "json"

@@ -1,29 +1,18 @@
 import { AsmAdapter } from '../../../src/infrastructure/adapters/AsmAdapter';
+import { AsmClient } from '../../../src/infrastructure/adapters/AsmClient';
 import { request } from 'undici';
 import type { IAuthService } from '../../../src/application/ports/IAuthService';
-import type { BuscarProductosParams } from '../../../src/domain/models/Producto';
-import type { RubroEquivalencia } from '../../../src/domain/mappings/RubroEquivalencia';
+import type { BuscarProductosAsmParams } from '../../../src/application/ports/IAsmProductoRepository';
 import type { AsmProductoRaw } from '../../../src/infrastructure/adapters/mappers/productoAsmMapper';
 
 jest.mock('undici', () => ({ request: jest.fn() }));
 
 const mockRequest = jest.mocked(request);
 
-const rubroEquivalencias: RubroEquivalencia[] = [
-  {
-    rubroId: 1,
-    nombre: 'Amortiguadores',
-    servicioA: { rubroId: '1', rubroName: 'amortiguador' },
-    servicioB: { categoria: 'AMORTIGUADORES' },
-  },
-];
-
 describe('AsmAdapter', () => {
-  const params: BuscarProductosParams = {
+  const params: BuscarProductosAsmParams = {
     codigoAuto: 'ABC123',
-    marcaId: 1,
-    rubroId: 1,
-    cantidadRenglones: 10,
+    categoria: 'AMORTIGUADORES',
   };
 
   const authService: IAuthService = {
@@ -49,11 +38,8 @@ describe('AsmAdapter', () => {
     };
     mockRequest.mockResolvedValue({ body: mockBody } as unknown as Awaited<ReturnType<typeof request>>);
 
-    const adapter = new AsmAdapter({
-      asmBaseUrl: 'http://localhost:3002',
-      authService,
-      rubroEquivalencias,
-    });
+    const asmClient = new AsmClient({ asmBaseUrl: 'http://localhost:3002', authService });
+    const adapter = new AsmAdapter({ asmClient });
 
     const result = await adapter.obtenerProductos(params);
 
@@ -81,13 +67,15 @@ describe('AsmAdapter', () => {
     ]);
   });
 
-  it('should throw when rubroId has no equivalencia', async () => {
-    const adapter = new AsmAdapter({
-      asmBaseUrl: 'http://localhost:3002',
-      authService,
-      rubroEquivalencias,
-    });
+  it('should propagate ASM errors', async () => {
+    const mockBody = {
+      json: jest.fn().mockResolvedValue({ error: 'not found' }),
+    };
+    mockRequest.mockResolvedValue({ body: mockBody } as unknown as Awaited<ReturnType<typeof request>>);
 
-    await expect(adapter.obtenerProductos({ ...params, rubroId: 9999 })).rejects.toThrow('9999');
+    const asmClient = new AsmClient({ asmBaseUrl: 'http://localhost:3002', authService });
+    const adapter = new AsmAdapter({ asmClient });
+
+    await expect(adapter.obtenerProductos(params)).rejects.toThrow('ASM error: not found');
   });
 });
