@@ -1,11 +1,22 @@
-import type { BuscarProductosParams, Producto } from '../../domain/models/Producto';
+import type { BuscarProductosParams, Producto, SadarCatalogoPart } from '../../domain/models/Producto';
 import type { IObtenerProductosUseCase } from '../ports/IObtenerProductosUseCase';
 import type { IRamosProductoRepository } from '../ports/IRamosProductoRepository';
 import type { IAsmProductoRepository } from '../ports/IAsmProductoRepository';
 import type { RubroEquivalencia } from '../../domain/mappings/RubroEquivalencia';
 import rubroEquivalenciasJson from '../../domain/mappings/rubroEquivalencias.json';
+import catalogoSadarJson from '../../domain/mappings/catalogo.sadar.json';
 
 const equivalencias = rubroEquivalenciasJson as unknown as RubroEquivalencia[];
+
+const catalogoSadar = (catalogoSadarJson as unknown as { parts: SadarCatalogoPart[] }).parts;
+
+function extractCodigoNumerico(codigo: string): string {
+  return codigo.replace(/^SDR/, '').replace(/O$/, '');
+}
+
+function buscarEnCatalogo(codigoNumerico: string): SadarCatalogoPart[] {
+  return catalogoSadar.filter((part) => part.codigo.includes(codigoNumerico));
+}
 
 export class ObtenerProductosSuspensionUseCase implements IObtenerProductosUseCase {
   private readonly ramosProductoRepository: IRamosProductoRepository;
@@ -49,6 +60,19 @@ export class ObtenerProductosSuspensionUseCase implements IObtenerProductosUseCa
     }
 
     const resultados = await Promise.all(promises);
-    return resultados.flat();
+    let productos = resultados.flat();
+
+    if (params.rubroId === 1 && equiv.rubroEquivalencias.RM !== null) {
+      productos = productos.map((p) => {
+        if (p.fuente === 'ramos' && p.marca === 'SADAR') {
+          const codigoNumerico = extractCodigoNumerico(p.codigo);
+          const catalogo = buscarEnCatalogo(codigoNumerico);
+          return { ...p, codigoNumerico, catalogo };
+        }
+        return p;
+      });
+    }
+
+    return productos;
   }
 }
