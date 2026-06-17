@@ -19,6 +19,6 @@ export function mapRamosProducto(raw: RamosProductoRaw): Producto {
     precioVenta: raw.precioSugerido,
     foto: raw.foto,
     stock: undefined,
-    fuente: 'RAMOS',
+    proveedor: 'RAMOS',
   };
 }

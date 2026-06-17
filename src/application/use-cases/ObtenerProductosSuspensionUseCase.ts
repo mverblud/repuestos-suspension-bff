@@ -64,7 +64,7 @@ export class ObtenerProductosSuspensionUseCase implements IObtenerProductosUseCa
 
     if (params.rubroId === 1 && equiv.rubroEquivalencias.RM !== null) {
       productos = productos.map((p) => {
-        if (p.fuente === 'RAMOS' && p.marca === 'SADAR') {
+        if (p.proveedor === 'RAMOS' && p.marca === 'SADAR') {
           const codigoNumerico = extractCodigoNumerico(p.codigo);
           const catalogo = buscarEnCatalogo(codigoNumerico);
           return { ...p, codigoNumerico, catalogo };

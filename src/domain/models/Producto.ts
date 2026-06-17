@@ -44,7 +44,7 @@ export interface Producto {
   precioVenta: number;
   foto?: string;
   stock?: number;
-  fuente: 'RAMOS' | 'ASM';
+  proveedor: 'RAMOS' | 'ASM';
   codigoNumerico?: string;
   catalogo?: SadarCatalogoPart[];
 }
