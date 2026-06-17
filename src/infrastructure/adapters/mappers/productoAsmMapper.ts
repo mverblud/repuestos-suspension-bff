@@ -19,6 +19,6 @@ export function mapAsmProducto(raw: AsmProductoRaw): Producto {
     precioVenta: raw.precioVenta,
     foto: raw.image,
     stock: raw.stock,
-    fuente: 'asm',
+    fuente: 'ASM',
   };
 }
