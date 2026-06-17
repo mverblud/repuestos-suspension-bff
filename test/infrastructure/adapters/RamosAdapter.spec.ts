@@ -61,7 +61,7 @@ describe('RamosAdapter', () => {
         precioVenta: 1500,
         foto: 'http://img.test/p001.jpg',
         stock: undefined,
-        fuente: 'RAMOS',
+        proveedor: 'RAMOS',
       },
     ]);
   });
