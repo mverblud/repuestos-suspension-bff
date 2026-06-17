@@ -17,7 +17,7 @@ describe('ObtenerProductosSuspensionUseCase', () => {
     marca: 'Monroe',
     categoria: 'AMORTIGUADORES',
     descripcion: 'Amortiguador delantero',
-    precioVenta: 1000,
+    precio: 1000,
     proveedor: 'RAMOS',
   };
 
@@ -26,7 +26,7 @@ describe('ObtenerProductosSuspensionUseCase', () => {
     marca: 'Sachs',
     categoria: 'AMORTIGUADORES',
     descripcion: 'Amortiguador trasero',
-    precioVenta: 1200,
+    precio: 1200,
     proveedor: 'ASM',
   };
 

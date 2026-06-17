@@ -16,8 +16,8 @@ export function mapAsmProducto(raw: AsmProductoRaw): Producto {
     marca: raw.brand,
     categoria: raw.category,
     descripcion: raw.vehicle,
-    precioVenta: raw.precioVenta,
-    foto: raw.image,
+    precio: raw.precioVenta,
+    imagen: raw.image,
     stock: raw.stock,
     proveedor: 'ASM',
   };

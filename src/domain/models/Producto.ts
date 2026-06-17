@@ -41,8 +41,8 @@ export interface Producto {
   marca: string;
   categoria: string;
   descripcion: string;
-  precioVenta: number;
-  foto?: string;
+  precio: number;
+  imagen?: string;
   stock?: number;
   proveedor: 'RAMOS' | 'ASM';
   codigoNumerico?: string;
