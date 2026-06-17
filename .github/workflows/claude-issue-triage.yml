@@ -1,0 +1,128 @@
+name: Claude Issue Triage
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  triage:
+    # Evitar bucles: no correr si quien dispara el evento es un bot
+    if: ${{ !endsWith(github.actor, '[bot]') }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Run Claude Issue Triage
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          claude_args: '--allowedTools "Bash(gh issue view *),Bash(gh issue edit *),Bash(gh issue comment *),Bash(gh label list *)"'
+          prompt: |
+            Eres un asistente de triage de issues para el repositorio **${{ github.repository }}**.
+            Este repo es un BFF (Backend for Frontend) TypeScript con **arquitectura hexagonal**
+            que actúa como intermediario hacia un scraper externo de repuestos de suspensión.
+
+            ## Arquitectura del repositorio
+            - **Domain** (`src/domain/models/`): interfaces puras — `Producto`, `BuscarProductosParams`
+            - **Application** (`src/application/`): puertos (contratos) y casos de uso
+              - `ports/IProductoRepository.ts` — port out hacia infraestructura
+              - `ports/IObtenerProductosUseCase.ts` — port in hacia HTTP
+              - `use-cases/` — implementaciones de los casos de uso
+            - **Infrastructure** (`src/infrastructure/`): detalles técnicos
+              - `adapters/` — implementan ports out; `ProductoScraperAdapter` llama al scraper vía `undici`
+              - `http/controllers/` — reciben requests Fastify y llaman al use case
+              - `http/routes/` — registran rutas en Fastify
+              - `config/container.ts` — grafo de dependencias con Awilix
+
+            ## Tu tarea para el issue #${{ github.event.issue.number }}
+
+            El issue fue **${{ github.event.action }}** en este repositorio. Sigue estos pasos en orden:
+
+            ---
+
+            ### Paso 1 — Leer el issue
+            Ejecuta el siguiente comando y analiza el título y el cuerpo:
+            ```
+            gh issue view ${{ github.event.issue.number }} --repo ${{ github.repository }}
+            ```
+
+            ---
+
+            ### Paso 2 — Asignar labels
+            Primero lista los labels disponibles (usa ÚNICAMENTE estos, no crees ni inventes nuevos):
+            ```
+            gh label list --repo ${{ github.repository }}
+            ```
+
+            Elige entre **1 y 3 labels** que mejor representen el issue y asígnalos:
+            ```
+            gh issue edit ${{ github.event.issue.number }} --repo ${{ github.repository }} --add-label "LABEL1,LABEL2"
+            ```
+
+            ---
+
+            ### Paso 3 — Verificar si ya existe un diagnóstico previo
+            Si el evento es `edited`, revisa los comentarios existentes:
+            ```
+            gh issue view ${{ github.event.issue.number }} --repo ${{ github.repository }} --comments
+            ```
+            - Si encuentras un comentario que contenga `🔍 Diagnóstico automático`,
+              **no publiques uno nuevo** para evitar duplicados. Detente aquí.
+            - Si no existe ninguno, continúa al Paso 4.
+
+            ---
+
+            ### Paso 4 — Publicar el diagnóstico como comentario Markdown
+            Publica un comentario usando `gh issue comment`. El cuerpo debe seguir
+            **exactamente** esta estructura Markdown (GitHub la renderizará):
+
+            ```
+            gh issue comment ${{ github.event.issue.number }} --repo ${{ github.repository }} --body "CUERPO_MARKDOWN"
+            ```
+
+            El `CUERPO_MARKDOWN` debe tener esta estructura:
+
+            ```markdown
+            ## 🔍 Diagnóstico automático
+
+            ### Resumen
+            [Descripción clara y concisa del problema o solicitud reportada, en tus propias palabras]
+
+            ### Clasificación
+            | Campo | Valor |
+            |-------|-------|
+            | Tipo | Bug / Mejora / Documentación / Pregunta / Otro |
+            | Labels asignados | `label1`, `label2` |
+
+            ### Áreas del código probablemente afectadas
+            Según la arquitectura hexagonal del repo, las capas y archivos más relevantes son:
+
+            | Capa | Ruta sugerida | Motivo |
+            |------|---------------|--------|
+            | Domain | `src/domain/models/...` | ... |
+            | Application | `src/application/...` | ... |
+            | Infrastructure | `src/infrastructure/...` | ... |
+
+            > Si el issue no impacta alguna capa, omite esa fila.
+
+            ### Hipótesis y pasos sugeridos para implementar la solución
+            1. ...
+            2. ...
+            3. ...
+
+            ### Contexto adicional
+            - Scraper externo: `POST /scraper/productos` con body `{ codigoAuto, marcaId, rubroId, cantidadRenglones }`
+            - Variables de entorno relevantes: `PORT`, `SCRAPER_BASE_URL`
+            - Tests: `npm test`; build: `npm run build`
+
+            ---
+            *🤖 Diagnóstico generado automáticamente por Claude. Puede contener imprecisiones — revisá antes de implementar.*
+            ```
