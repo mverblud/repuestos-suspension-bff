@@ -16,8 +16,8 @@ export function mapRamosProducto(raw: RamosProductoRaw): Producto {
     marca: raw.marca,
     categoria: raw.rubro,
     descripcion: raw.nombre,
-    precioVenta: raw.precioSugerido,
-    foto: raw.foto,
+    precio: raw.precioSugerido,
+    imagen: raw.foto,
     stock: undefined,
     proveedor: 'RAMOS',
   };
