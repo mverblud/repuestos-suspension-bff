@@ -18,7 +18,7 @@ describe('ObtenerProductosSuspensionUseCase', () => {
     categoria: 'AMORTIGUADORES',
     descripcion: 'Amortiguador delantero',
     precioVenta: 1000,
-    fuente: 'ramos',
+    fuente: 'RAMOS',
   };
 
   const productoAsm: Producto = {
@@ -27,7 +27,7 @@ describe('ObtenerProductosSuspensionUseCase', () => {
     categoria: 'AMORTIGUADORES',
     descripcion: 'Amortiguador trasero',
     precioVenta: 1200,
-    fuente: 'asm',
+    fuente: 'ASM',
   };
 
   it('should call both repositories in parallel and merge results', async () => {

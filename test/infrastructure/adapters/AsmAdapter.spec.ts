@@ -62,7 +62,7 @@ describe('AsmAdapter', () => {
         precioVenta: 2000,
         foto: 'http://img.test/b001.jpg',
         stock: 5,
-        fuente: 'asm',
+        fuente: 'ASM',
       },
     ]);
   });
