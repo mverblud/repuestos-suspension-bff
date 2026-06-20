@@ -16,7 +16,6 @@ export interface SadarVehiculo {
   tipo: string;
   desde: number | null;
   hasta: number | null;
-  quality_flags: Record<string, unknown>;
 }
 
 export interface SadarVariante {
@@ -27,13 +26,11 @@ export interface SadarVariante {
   dimensional: SadarDimensional;
   equivalencia: SadarEquivalencia[];
   aplicaciones: SadarVehiculo[];
-  quality_flags: Record<string, unknown>;
 }
 
 export interface SadarCatalogoPart {
   codigo: string;
   variantes: SadarVariante[];
-  quality_flags: Record<string, unknown>;
 }
 
 export interface Producto {
