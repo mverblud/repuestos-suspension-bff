@@ -5,6 +5,7 @@ import { buildContainer } from './infrastructure/config/container';
 import { productosRoutes } from './infrastructure/http/routes/productosRoutes';
 import { rubrosRoutes } from './infrastructure/http/routes/rubrosRoutes';
 import { autosRoutes } from './infrastructure/http/routes/autosRoutes';
+import { catalogoRoutes } from './infrastructure/http/routes/catalogoRoutes';
 
 const PORT = Number(process.env.PORT ?? 3000);
 const isDev = process.env.NODE_ENV !== 'production';
@@ -21,6 +22,7 @@ async function main(): Promise<void> {
   await productosRoutes(fastify, container.resolve('productosController'));
   await rubrosRoutes(fastify, container.resolve('rubrosController'));
   await autosRoutes(fastify, container.resolve('autosController'));
+  await catalogoRoutes(fastify, container.resolve('catalogoController'));
 
   await fastify.listen({ port: PORT, host: '0.0.0.0' });
 }
