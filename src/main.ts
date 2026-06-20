@@ -24,6 +24,8 @@ async function main(): Promise<void> {
   await autosRoutes(fastify, container.resolve('autosController'));
   await catalogoRoutes(fastify, container.resolve('catalogoController'));
 
+  fastify.get('/health', () => ({ status: 'ok' }));
+
   await fastify.listen({ port: PORT, host: '0.0.0.0' });
 }
 
