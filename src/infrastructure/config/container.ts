@@ -11,6 +11,8 @@ import { ModeloAdapter } from '../adapters/ModeloAdapter';
 import { AuthService } from '../adapters/AuthService';
 import { CatalogoAdapter } from '../adapters/CatalogoAdapter';
 import { ObtenerProductosSuspensionUseCase } from '../../application/use-cases/ObtenerProductosSuspensionUseCase';
+import { ObtenerProductosRamosUseCase } from '../../application/use-cases/ObtenerProductosRamosUseCase';
+import { ObtenerProductosAsmUseCase } from '../../application/use-cases/ObtenerProductosAsmUseCase';
 import { ObtenerRubrosUseCase } from '../../application/use-cases/ObtenerRubrosUseCase';
 import { ObtenerAutosUseCase } from '../../application/use-cases/ObtenerAutosUseCase';
 import { ObtenerCatalogoUseCase } from '../../application/use-cases/ObtenerCatalogoUseCase';
@@ -42,6 +44,8 @@ interface Cradle {
   modeloRepository: ModeloAdapter;
   catalogoRepository: CatalogoAdapter;
   obtenerProductosUseCase: ObtenerProductosSuspensionUseCase;
+  obtenerProductosRamosUseCase: ObtenerProductosRamosUseCase;
+  obtenerProductosAsmUseCase: ObtenerProductosAsmUseCase;
   obtenerRubrosUseCase: ObtenerRubrosUseCase;
   obtenerAutosUseCase: ObtenerAutosUseCase;
   obtenerCatalogoUseCase: ObtenerCatalogoUseCase;
@@ -80,6 +84,8 @@ export function buildContainer(): AwilixContainer<Cradle> {
     modeloRepository: asClass(ModeloAdapter).singleton(),
     catalogoRepository: asClass(CatalogoAdapter).singleton(),
     obtenerProductosUseCase: asClass(ObtenerProductosSuspensionUseCase).singleton(),
+    obtenerProductosRamosUseCase: asClass(ObtenerProductosRamosUseCase).singleton(),
+    obtenerProductosAsmUseCase: asClass(ObtenerProductosAsmUseCase).singleton(),
     obtenerRubrosUseCase: asClass(ObtenerRubrosUseCase).singleton(),
     obtenerAutosUseCase: asClass(ObtenerAutosUseCase).singleton(),
     obtenerCatalogoUseCase: asClass(ObtenerCatalogoUseCase).singleton(),
