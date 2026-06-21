@@ -1,7 +1,6 @@
 import { request } from 'undici';
-import type { AsmSearchBody, AsmSearchResponse } from '../../domain/models/Producto';
+import type { AsmSearchBody, AsmSearchResponse, ProductoExternoRaw } from '../../domain/models/Producto';
 import type { IAuthService } from '../../application/ports/IAuthService';
-import type { AsmProductoRaw } from './mappers/productoAsmMapper';
 
 interface AsmSearchParams {
   query: string;
@@ -9,9 +8,9 @@ interface AsmSearchParams {
 }
 
 interface AsmSearchRawResponse {
-  total: number;
-  products: AsmProductoRaw[];
-  timing?: unknown;
+  totalProductos: number;
+  productos: ProductoExternoRaw[];
+  timing?: { totalMs: number };
   error?: string;
 }
 
@@ -24,7 +23,7 @@ export class AsmClient {
     this.authService = authService;
   }
 
-  async search({ query, categoria }: AsmSearchParams): Promise<AsmProductoRaw[]> {
+  async search({ query, categoria }: AsmSearchParams): Promise<ProductoExternoRaw[]> {
     const token = await this.authService.getToken();
 
     const { body } = await request(`${this.baseUrl}/search`, {
@@ -40,7 +39,7 @@ export class AsmClient {
     if (response.error !== undefined) {
       throw new Error(`ASM error: ${response.error}`);
     }
-    return response.products ?? [];
+    return response.productos ?? [];
   }
 
   async searchCrudo(searchBody: AsmSearchBody): Promise<AsmSearchResponse> {

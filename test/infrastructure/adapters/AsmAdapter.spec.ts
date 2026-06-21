@@ -3,7 +3,7 @@ import { AsmClient } from '../../../src/infrastructure/adapters/AsmClient';
 import { request } from 'undici';
 import type { IAuthService } from '../../../src/application/ports/IAuthService';
 import type { BuscarProductosAsmParams } from '../../../src/application/ports/IAsmProductoRepository';
-import type { AsmProductoRaw } from '../../../src/infrastructure/adapters/mappers/productoAsmMapper';
+import type { ProductoExternoRaw } from '../../../src/domain/models/Producto';
 
 jest.mock('undici', () => ({ request: jest.fn() }));
 
@@ -22,19 +22,26 @@ describe('AsmAdapter', () => {
   beforeEach(() => jest.clearAllMocks());
 
   it('should make authenticated search and return mapped products', async () => {
-    const rawProducts: AsmProductoRaw[] = [
+    const rawProducts: ProductoExternoRaw[] = [
       {
-        code: 'B001',
-        brand: 'Sachs',
-        category: 'AMORTIGUADORES',
-        vehicle: 'Amortiguador trasero',
-        precioVenta: 2000,
-        stock: 5,
-        image: 'http://img.test/b001.jpg',
+        codigo: '34882G-COR',
+        marca: 'CORVEN',
+        rubro: 'AMORTIGUADOR',
+        aplicacion: 'FIAT Cronos 18> Del. Derecho',
+        imagen: '',
+        precioLista: 178977,
+        iva: 21,
+        descuento: 50,
+        costoNeto: 89488.5,
+        montoIVA: 18792.58,
+        costoIVA: 108281.08,
+        margen: 26,
+        precioSugerido: 136434.17,
+        stock: 2,
       },
     ];
     const mockBody = {
-      json: jest.fn().mockResolvedValue({ total: 1, products: rawProducts, timing: 50 }),
+      json: jest.fn().mockResolvedValue({ totalProductos: 1, productos: rawProducts, timing: { totalMs: 120 } }),
     };
     mockRequest.mockResolvedValue({ body: mockBody } as unknown as Awaited<ReturnType<typeof request>>);
 
@@ -55,13 +62,20 @@ describe('AsmAdapter', () => {
 
     expect(result).toEqual([
       {
-        codigo: 'B001',
-        marca: 'Sachs',
-        categoria: 'AMORTIGUADORES',
-        descripcion: 'Amortiguador trasero',
-        precio: 2000,
-        imagen: 'http://img.test/b001.jpg',
-        stock: 5,
+        codigo: '34882G-COR',
+        marca: 'CORVEN',
+        rubro: 'AMORTIGUADOR',
+        aplicacion: 'FIAT Cronos 18> Del. Derecho',
+        imagen: '',
+        precioLista: 178977,
+        iva: 21,
+        descuento: 50,
+        costoNeto: 89488.5,
+        montoIVA: 18792.58,
+        costoIVA: 108281.08,
+        margen: 26,
+        precioSugerido: 136434.17,
+        stock: 2,
         proveedor: 'ASM',
       },
     ]);

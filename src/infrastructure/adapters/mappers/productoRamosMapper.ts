@@ -1,24 +1,5 @@
-import type { Producto } from '../../../domain/models/Producto';
+import type { Producto, ProductoExternoRaw } from '../../../domain/models/Producto';
 
-export interface RamosProductoRaw {
-  codigo: string;
-  marca: string;
-  rubro: string;
-  nombre: string;
-  foto?: string;
-  descuento: number;
-  precioSugerido: number;
-}
-
-export function mapRamosProducto(raw: RamosProductoRaw): Producto {
-  return {
-    codigo: raw.codigo,
-    marca: raw.marca,
-    categoria: raw.rubro,
-    descripcion: raw.nombre,
-    precio: raw.precioSugerido,
-    imagen: raw.foto,
-    stock: undefined,
-    proveedor: 'RAMOS',
-  };
+export function mapRamosProducto(raw: ProductoExternoRaw): Producto {
+  return { ...raw, stock: undefined, proveedor: 'RAMOS' };
 }

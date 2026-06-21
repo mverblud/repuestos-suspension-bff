@@ -13,20 +13,35 @@ describe('ObtenerProductosSuspensionUseCase', () => {
   };
 
   const productoRamos: Producto = {
-    codigo: 'A1',
+    codigo: 'MON001',
     marca: 'Monroe',
-    categoria: 'AMORTIGUADORES',
-    descripcion: 'Amortiguador delantero',
-    precio: 1000,
+    rubro: 'AMORTIGUADOR',
+    aplicacion: 'Amortiguador delantero',
+    precioLista: 90948.34,
+    iva: 21,
+    descuento: 30,
+    costoNeto: 63663.84,
+    montoIVA: 13369.41,
+    costoIVA: 77033.25,
+    margen: 20,
+    precioSugerido: 92439.9,
     proveedor: 'RAMOS',
   };
 
   const productoAsm: Producto = {
-    codigo: 'B1',
-    marca: 'Sachs',
-    categoria: 'AMORTIGUADORES',
-    descripcion: 'Amortiguador trasero',
-    precio: 1200,
+    codigo: '34882G-COR',
+    marca: 'CORVEN',
+    rubro: 'AMORTIGUADOR',
+    aplicacion: 'FIAT Cronos 18> Del. Derecho',
+    precioLista: 178977,
+    iva: 21,
+    descuento: 50,
+    costoNeto: 89488.5,
+    montoIVA: 18792.58,
+    costoIVA: 108281.08,
+    margen: 26,
+    precioSugerido: 136434.17,
+    stock: 2,
     proveedor: 'ASM',
   };
 
