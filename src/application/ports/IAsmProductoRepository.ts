@@ -1,4 +1,4 @@
-import type { Producto } from '../../domain/models/Producto';
+import type { AsmSearchBody, AsmSearchResponse, Producto } from '../../domain/models/Producto';
 
 export interface BuscarProductosAsmParams {
   codigoAuto: string;
@@ -7,4 +7,5 @@ export interface BuscarProductosAsmParams {
 
 export interface IAsmProductoRepository {
   obtenerProductos(params: BuscarProductosAsmParams): Promise<Producto[]>;
+  buscarProductosCrudo(body: AsmSearchBody): Promise<AsmSearchResponse>;
 }

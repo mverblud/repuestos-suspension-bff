@@ -5,7 +5,7 @@
   },
   "variable": [
     {
-      "key": "baseUrl",
+      "key": "baseURLBFF",
       "value": "http://localhost:3000",
       "type": "string"
     },
@@ -30,13 +30,65 @@
               }
             ],
             "url": {
-              "raw": "{{baseUrl}}/productos",
-              "host": ["{{baseUrl}}"],
+              "raw": "{{baseURLBFF}}/productos",
+              "host": ["{{baseURLBFF}}"],
               "path": ["productos"]
             },
             "body": {
               "mode": "raw",
               "raw": "{\n  \"codigoAuto\": \"ABC123\",\n  \"marcaId\": 1,\n  \"rubroId\": 2,\n  \"cantidadRenglones\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Buscar productos Ramos (crudo)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseURLBFF}}/productos/ramos",
+              "host": ["{{baseURLBFF}}"],
+              "path": ["productos", "ramos"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"codigoAuto\": \"corsa\",\n  \"marcaId\": \"46\",\n  \"rubroId\": \"10\",\n  \"cantidadRenglones\": 500\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Buscar productos ASM (crudo)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseURLBFF}}/productos/asm",
+              "host": ["{{baseURLBFF}}"],
+              "path": ["productos", "asm"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"cronos\",\n  \"filters\": {\n    \"categoria\": \"AMORTIGUADORES\"\n  }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -56,8 +108,8 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/rubros",
-              "host": ["{{baseUrl}}"],
+              "raw": "{{baseURLBFF}}/rubros",
+              "host": ["{{baseURLBFF}}"],
               "path": ["rubros"]
             }
           }
@@ -68,8 +120,8 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/rubros?soloHabilitados=true",
-              "host": ["{{baseUrl}}"],
+              "raw": "{{baseURLBFF}}/rubros?soloHabilitados=true",
+              "host": ["{{baseURLBFF}}"],
               "path": ["rubros"],
               "query": [
                 {
@@ -91,8 +143,8 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/cars",
-              "host": ["{{baseUrl}}"],
+              "raw": "{{baseURLBFF}}/cars",
+              "host": ["{{baseURLBFF}}"],
               "path": ["cars"]
             }
           }
@@ -103,8 +155,8 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/cars?onlyEnabled=true",
-              "host": ["{{baseUrl}}"],
+              "raw": "{{baseURLBFF}}/cars?onlyEnabled=true",
+              "host": ["{{baseURLBFF}}"],
               "path": ["cars"],
               "query": [
                 {

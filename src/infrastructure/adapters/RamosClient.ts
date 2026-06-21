@@ -1,5 +1,5 @@
 import { request } from 'undici';
-import type { BuscarProductosParams } from '../../domain/models/Producto';
+import type { BuscarProductosParams, RamosScraperResponse } from '../../domain/models/Producto';
 import type { IAuthService } from '../../application/ports/IAuthService';
 import type { RamosProductoRaw } from './mappers/productoRamosMapper';
 
@@ -30,5 +30,18 @@ export class RamosClient {
     });
     const response = (await body.json()) as RamosResponse;
     return response.productos;
+  }
+
+  async buscarProductosCrudo(params: BuscarProductosParams): Promise<RamosScraperResponse> {
+    const token = await this.authService.getToken();
+    const { body } = await request(`${this.baseUrl}/scraper/productos`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(params),
+    });
+    return (await body.json()) as RamosScraperResponse;
   }
 }

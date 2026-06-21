@@ -48,7 +48,25 @@ export interface Producto {
 
 export interface BuscarProductosParams {
   codigoAuto: string;
-  marcaId: number;
-  rubroId: number;
+  marcaId: number | string;
+  rubroId: number | string;
   cantidadRenglones: number;
+}
+
+export interface RamosScraperResponse {
+  params: unknown;
+  totalProductos: number;
+  productos: unknown[];
+}
+
+export interface AsmSearchBody {
+  query: string;
+  filters: { categoria: string };
+}
+
+export interface AsmSearchResponse {
+  total: number;
+  products: unknown[];
+  timing?: unknown;
+  error?: string;
 }

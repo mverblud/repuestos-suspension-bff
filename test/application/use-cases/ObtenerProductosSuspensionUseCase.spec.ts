@@ -33,9 +33,11 @@ describe('ObtenerProductosSuspensionUseCase', () => {
   it('should call both repositories in parallel and merge results', async () => {
     const ramosProductoRepository: IRamosProductoRepository = {
       obtenerProductos: jest.fn().mockResolvedValue([productoRamos]),
+      buscarProductosCrudo: jest.fn(),
     };
     const asmProductoRepository: IAsmProductoRepository = {
       obtenerProductos: jest.fn().mockResolvedValue([productoAsm]),
+      buscarProductosCrudo: jest.fn(),
     };
 
     const useCase = new ObtenerProductosSuspensionUseCase({
@@ -57,9 +59,11 @@ describe('ObtenerProductosSuspensionUseCase', () => {
   it('should throw when rubroId has no equivalencia', async () => {
     const ramosProductoRepository: IRamosProductoRepository = {
       obtenerProductos: jest.fn(),
+      buscarProductosCrudo: jest.fn(),
     };
     const asmProductoRepository: IAsmProductoRepository = {
       obtenerProductos: jest.fn(),
+      buscarProductosCrudo: jest.fn(),
     };
 
     const useCase = new ObtenerProductosSuspensionUseCase({
