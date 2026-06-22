@@ -9,12 +9,40 @@ describe('ObtenerProductosAsmUseCase', () => {
   };
 
   const scraperResponse: AsmSearchResponse = {
-    total: 2,
-    products: [
-      { code: 'B001', brand: 'Sachs', category: 'AMORTIGUADORES', vehicle: 'Fiat Cronos', precioVenta: 2000 },
-      { code: 'B002', brand: 'Monroe', category: 'AMORTIGUADORES', vehicle: 'Fiat Cronos', precioVenta: 1800 },
+    totalProductos: 2,
+    productos: [
+      {
+        codigo: '34882G-COR',
+        marca: 'CORVEN',
+        rubro: 'AMORTIGUADOR',
+        aplicacion: 'FIAT Cronos 18> Del. Derecho',
+        precioLista: 178977,
+        iva: 21,
+        descuento: 50,
+        costoNeto: 89488.5,
+        montoIVA: 18792.58,
+        costoIVA: 108281.08,
+        margen: 26,
+        precioSugerido: 136434.17,
+        stock: 2,
+      },
+      {
+        codigo: '34883G-COR',
+        marca: 'CORVEN',
+        rubro: 'AMORTIGUADOR',
+        aplicacion: 'FIAT Cronos 18> Del. Izquierdo',
+        precioLista: 178977,
+        iva: 21,
+        descuento: 50,
+        costoNeto: 89488.5,
+        montoIVA: 18792.58,
+        costoIVA: 108281.08,
+        margen: 26,
+        precioSugerido: 136434.17,
+        stock: 2,
+      },
     ],
-    timing: 42,
+    timing: { totalMs: 4288 },
   };
 
   it('should delegate to asmProductoRepository.buscarProductosCrudo and return raw response', async () => {
@@ -33,7 +61,7 @@ describe('ObtenerProductosAsmUseCase', () => {
   });
 
   it('should pass through ASM error field without throwing', async () => {
-    const errorResponse: AsmSearchResponse = { total: 0, products: [], error: 'not found' };
+    const errorResponse: AsmSearchResponse = { totalProductos: 0, productos: [], error: 'not found' };
     const asmProductoRepository: IAsmProductoRepository = {
       obtenerProductos: jest.fn(),
       buscarProductosCrudo: jest.fn().mockResolvedValue(errorResponse),

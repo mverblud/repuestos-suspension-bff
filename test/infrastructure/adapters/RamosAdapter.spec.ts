@@ -2,8 +2,7 @@ import { RamosAdapter } from '../../../src/infrastructure/adapters/RamosAdapter'
 import { RamosClient } from '../../../src/infrastructure/adapters/RamosClient';
 import { request } from 'undici';
 import type { IAuthService } from '../../../src/application/ports/IAuthService';
-import type { BuscarProductosParams } from '../../../src/domain/models/Producto';
-import type { RamosProductoRaw } from '../../../src/infrastructure/adapters/mappers/productoRamosMapper';
+import type { BuscarProductosParams, ProductoExternoRaw } from '../../../src/domain/models/Producto';
 
 jest.mock('undici', () => ({ request: jest.fn() }));
 
@@ -24,15 +23,21 @@ describe('RamosAdapter', () => {
   beforeEach(() => jest.clearAllMocks());
 
   it('should POST to scraper endpoint with auth header and return mapped products', async () => {
-    const raw: RamosProductoRaw[] = [
+    const raw: ProductoExternoRaw[] = [
       {
-        codigo: 'P001',
-        marca: 'Monroe',
-        rubro: 'AMORTIGUADORES',
-        nombre: 'Amortiguador delantero',
-        foto: 'http://img.test/p001.jpg',
-        descuento: 10,
-        precioSugerido: 1500,
+        codigo: 'SDR10552O',
+        marca: 'SADAR',
+        rubro: 'AMORTIGUADOR',
+        aplicacion: 'AMO FIAT CRONOS 1.3/ 1.8 TRAS',
+        imagen: 'https://gesis2.com/autopartesramos/res/img/articulos/SDR10552O.jpg',
+        precioLista: 90948.34,
+        iva: 21,
+        descuento: 55,
+        costoNeto: 40926.75,
+        montoIVA: 8594.62,
+        costoIVA: 49521.37,
+        margen: 30,
+        precioSugerido: 64377.78,
       },
     ];
     const mockBody = { json: jest.fn().mockResolvedValue({ params: {}, totalProductos: 1, productos: raw }) };
@@ -54,12 +59,19 @@ describe('RamosAdapter', () => {
 
     expect(result).toEqual([
       {
-        codigo: 'P001',
-        marca: 'Monroe',
-        categoria: 'AMORTIGUADORES',
-        descripcion: 'Amortiguador delantero',
-        precio: 1500,
-        imagen: 'http://img.test/p001.jpg',
+        codigo: 'SDR10552O',
+        marca: 'SADAR',
+        rubro: 'AMORTIGUADOR',
+        aplicacion: 'AMO FIAT CRONOS 1.3/ 1.8 TRAS',
+        imagen: 'https://gesis2.com/autopartesramos/res/img/articulos/SDR10552O.jpg',
+        precioLista: 90948.34,
+        iva: 21,
+        descuento: 55,
+        costoNeto: 40926.75,
+        montoIVA: 8594.62,
+        costoIVA: 49521.37,
+        margen: 30,
+        precioSugerido: 64377.78,
         stock: undefined,
         proveedor: 'RAMOS',
       },

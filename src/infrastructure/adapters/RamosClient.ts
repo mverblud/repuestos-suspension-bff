@@ -1,12 +1,11 @@
 import { request } from 'undici';
-import type { BuscarProductosParams, RamosScraperResponse } from '../../domain/models/Producto';
+import type { BuscarProductosParams, ProductoExternoRaw, RamosScraperResponse } from '../../domain/models/Producto';
 import type { IAuthService } from '../../application/ports/IAuthService';
-import type { RamosProductoRaw } from './mappers/productoRamosMapper';
 
 interface RamosResponse {
   params: unknown;
   totalProductos: number;
-  productos: RamosProductoRaw[];
+  productos: ProductoExternoRaw[];
 }
 
 export class RamosClient {
@@ -18,7 +17,7 @@ export class RamosClient {
     this.authService = ramosAuthService;
   }
 
-  async buscarProductos(params: BuscarProductosParams): Promise<RamosProductoRaw[]> {
+  async buscarProductos(params: BuscarProductosParams): Promise<ProductoExternoRaw[]> {
     const token = await this.authService.getToken();
     const { body } = await request(`${this.baseUrl}/scraper/productos`, {
       method: 'POST',

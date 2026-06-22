@@ -33,13 +33,37 @@ export interface SadarCatalogoPart {
   variantes: SadarVariante[];
 }
 
+export interface ProductoExternoRaw {
+  codigo: string;
+  marca: string;
+  rubro: string;
+  aplicacion: string;
+  imagen?: string;
+  precioLista: number;
+  iva: number;
+  descuento: number;
+  costoNeto: number;
+  montoIVA: number;
+  costoIVA: number;
+  margen: number;
+  precioSugerido: number;
+  stock?: number; // presente en ASM, ausente en RM
+}
+
 export interface Producto {
   codigo: string;
   marca: string;
-  categoria: string;
-  descripcion: string;
-  precio: number;
+  rubro: string;
+  aplicacion: string;
   imagen?: string;
+  precioLista: number;
+  iva: number;
+  descuento: number;
+  costoNeto: number;
+  montoIVA: number;
+  costoIVA: number;
+  margen: number;
+  precioSugerido: number;
   stock?: number;
   proveedor: 'RAMOS' | 'ASM';
   codigoNumerico?: string;
@@ -56,7 +80,7 @@ export interface BuscarProductosParams {
 export interface RamosScraperResponse {
   params: unknown;
   totalProductos: number;
-  productos: unknown[];
+  productos: ProductoExternoRaw[];
 }
 
 export interface AsmSearchBody {
@@ -65,8 +89,8 @@ export interface AsmSearchBody {
 }
 
 export interface AsmSearchResponse {
-  total: number;
-  products: unknown[];
-  timing?: unknown;
+  totalProductos: number;
+  productos: ProductoExternoRaw[];
+  timing?: { totalMs: number };
   error?: string;
 }
