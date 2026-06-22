@@ -13,9 +13,59 @@
       "key": "ramosBaseUrl",
       "value": "http://localhost:3001",
       "type": "string"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "string"
     }
   ],
   "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const json = pm.response.json();",
+                  "if (json.token) {",
+                  "  pm.collectionVariables.set('token', json.token);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseURLBFF}}/auth/login",
+              "host": ["{{baseURLBFF}}"],
+              "path": ["auth", "login"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"cambiar-password\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     {
       "name": "Productos",
       "item": [
@@ -27,6 +77,10 @@
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
               }
             ],
             "url": {
@@ -53,6 +107,10 @@
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
               }
             ],
             "url": {
@@ -79,6 +137,10 @@
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
               }
             ],
             "url": {
@@ -106,7 +168,12 @@
           "name": "Obtener todos los rubros",
           "request": {
             "method": "GET",
-            "header": [],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
             "url": {
               "raw": "{{baseURLBFF}}/rubros",
               "host": ["{{baseURLBFF}}"],
@@ -118,7 +185,12 @@
           "name": "Obtener rubros habilitados",
           "request": {
             "method": "GET",
-            "header": [],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
             "url": {
               "raw": "{{baseURLBFF}}/rubros?soloHabilitados=true",
               "host": ["{{baseURLBFF}}"],
@@ -141,7 +213,12 @@
           "name": "Obtener todas las marcas y modelos",
           "request": {
             "method": "GET",
-            "header": [],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
             "url": {
               "raw": "{{baseURLBFF}}/cars",
               "host": ["{{baseURLBFF}}"],
@@ -153,7 +230,12 @@
           "name": "Obtener solo habilitados",
           "request": {
             "method": "GET",
-            "header": [],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
             "url": {
               "raw": "{{baseURLBFF}}/cars?onlyEnabled=true",
               "host": ["{{baseURLBFF}}"],
@@ -162,6 +244,140 @@
                 {
                   "key": "onlyEnabled",
                   "value": "true"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Catálogo",
+      "item": [
+        {
+          "name": "Obtener catálogo completo",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseURLBFF}}/catalogo",
+              "host": ["{{baseURLBFF}}"],
+              "path": ["catalogo"]
+            }
+          }
+        },
+        {
+          "name": "Obtener part por código",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseURLBFF}}/catalogo/:codigo",
+              "host": ["{{baseURLBFF}}"],
+              "path": ["catalogo", ":codigo"],
+              "variable": [
+                {
+                  "key": "codigo",
+                  "value": "ABC123"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Crear part",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseURLBFF}}/catalogo",
+              "host": ["{{baseURLBFF}}"],
+              "path": ["catalogo"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"codigo\": \"ABC123\",\n  \"variantes\": []\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Actualizar part",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseURLBFF}}/catalogo/:codigo",
+              "host": ["{{baseURLBFF}}"],
+              "path": ["catalogo", ":codigo"],
+              "variable": [
+                {
+                  "key": "codigo",
+                  "value": "ABC123"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"variantes\": []\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Eliminar part",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseURLBFF}}/catalogo/:codigo",
+              "host": ["{{baseURLBFF}}"],
+              "path": ["catalogo", ":codigo"],
+              "variable": [
+                {
+                  "key": "codigo",
+                  "value": "ABC123"
                 }
               ]
             }
