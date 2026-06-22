@@ -20,10 +20,13 @@ import { ObtenerCatalogoPorCodigoUseCase } from '../../application/use-cases/Obt
 import { CrearCatalogoPartUseCase } from '../../application/use-cases/CrearCatalogoPartUseCase';
 import { ActualizarCatalogoPartUseCase } from '../../application/use-cases/ActualizarCatalogoPartUseCase';
 import { EliminarCatalogoPartUseCase } from '../../application/use-cases/EliminarCatalogoPartUseCase';
+import { JwtTokenService } from '../adapters/JwtTokenService';
+import { LoginUseCase } from '../../application/use-cases/LoginUseCase';
 import { ProductosController } from '../http/controllers/ProductosController';
 import { RubrosController } from '../http/controllers/RubrosController';
 import { AutosController } from '../http/controllers/AutosController';
 import { CatalogoController } from '../http/controllers/CatalogoController';
+import { AuthController } from '../http/controllers/AuthController';
 
 interface Cradle {
   ramosBaseUrl: string;
@@ -33,8 +36,15 @@ interface Cradle {
   asmUsername: string;
   asmPassword: string;
   catalogoFilePath: string;
+  jwtSecret: string;
+  jwtExpiresIn: string;
+  authUsername: string;
+  authPassword: string;
   authService: AuthService;
   ramosAuthService: RamosAuthService;
+  tokenService: JwtTokenService;
+  loginUseCase: LoginUseCase;
+  authController: AuthController;
   asmClient: AsmClient;
   ramosClient: RamosClient;
   ramosProductoRepository: RamosAdapter;
@@ -73,6 +83,10 @@ export function buildContainer(): AwilixContainer<Cradle> {
       process.env.CATALOGO_FILE_PATH ??
         path.resolve(process.cwd(), 'src/domain/mappings/catalogo.sadar.json'),
     ),
+    jwtSecret: asValue(process.env.JWT_SECRET ?? ''),
+    jwtExpiresIn: asValue(process.env.JWT_EXPIRES_IN ?? '8h'),
+    authUsername: asValue(process.env.AUTH_USERNAME ?? ''),
+    authPassword: asValue(process.env.AUTH_PASSWORD ?? ''),
     authService: asClass(AuthService).singleton(),
     ramosAuthService: asClass(RamosAuthService).singleton(),
     asmClient: asClass(AsmClient).singleton(),
@@ -93,10 +107,13 @@ export function buildContainer(): AwilixContainer<Cradle> {
     crearCatalogoPartUseCase: asClass(CrearCatalogoPartUseCase).singleton(),
     actualizarCatalogoPartUseCase: asClass(ActualizarCatalogoPartUseCase).singleton(),
     eliminarCatalogoPartUseCase: asClass(EliminarCatalogoPartUseCase).singleton(),
+    tokenService: asClass(JwtTokenService).singleton(),
+    loginUseCase: asClass(LoginUseCase).singleton(),
     productosController: asClass(ProductosController).singleton(),
     rubrosController: asClass(RubrosController).singleton(),
     autosController: asClass(AutosController).singleton(),
     catalogoController: asClass(CatalogoController).singleton(),
+    authController: asClass(AuthController).singleton(),
   });
 
   return container;
