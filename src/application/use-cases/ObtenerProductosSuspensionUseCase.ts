@@ -59,7 +59,19 @@ export class ObtenerProductosSuspensionUseCase implements IObtenerProductosUseCa
       );
     }
 
-    const resultados = await Promise.all(promises);
+    const settled = await Promise.allSettled(promises);
+
+    const errors = settled.filter((r): r is PromiseRejectedResult => r.status === 'rejected');
+    if (errors.length === promises.length && promises.length > 0) {
+      throw new Error(
+        `Todos los servicios fallaron: ${errors.map((e) => String(e.reason)).join('; ')}`,
+      );
+    }
+
+    const resultados = settled
+      .filter((r): r is PromiseFulfilledResult<Producto[]> => r.status === 'fulfilled')
+      .map((r) => r.value);
+
     let productos = resultados.flat();
 
     if (params.rubroId === 1 && equiv.rubroEquivalencias.RM !== null) {
