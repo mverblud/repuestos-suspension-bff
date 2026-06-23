@@ -71,6 +71,62 @@ describe('ObtenerProductosSuspensionUseCase', () => {
     expect(result).toEqual([productoRamos, productoAsm]);
   });
 
+  it('should return only ASM products when RM fails', async () => {
+    const ramosProductoRepository: IRamosProductoRepository = {
+      obtenerProductos: jest.fn().mockRejectedValue(new Error('RM timeout')),
+      buscarProductosCrudo: jest.fn(),
+    };
+    const asmProductoRepository: IAsmProductoRepository = {
+      obtenerProductos: jest.fn().mockResolvedValue([productoAsm]),
+      buscarProductosCrudo: jest.fn(),
+    };
+
+    const useCase = new ObtenerProductosSuspensionUseCase({
+      ramosProductoRepository,
+      asmProductoRepository,
+    });
+
+    const result = await useCase.execute(params);
+    expect(result).toEqual([productoAsm]);
+  });
+
+  it('should return only RM products when ASM fails', async () => {
+    const ramosProductoRepository: IRamosProductoRepository = {
+      obtenerProductos: jest.fn().mockResolvedValue([productoRamos]),
+      buscarProductosCrudo: jest.fn(),
+    };
+    const asmProductoRepository: IAsmProductoRepository = {
+      obtenerProductos: jest.fn().mockRejectedValue(new Error('ASM timeout')),
+      buscarProductosCrudo: jest.fn(),
+    };
+
+    const useCase = new ObtenerProductosSuspensionUseCase({
+      ramosProductoRepository,
+      asmProductoRepository,
+    });
+
+    const result = await useCase.execute(params);
+    expect(result).toEqual([productoRamos]);
+  });
+
+  it('should throw when both RM and ASM fail', async () => {
+    const ramosProductoRepository: IRamosProductoRepository = {
+      obtenerProductos: jest.fn().mockRejectedValue(new Error('RM timeout')),
+      buscarProductosCrudo: jest.fn(),
+    };
+    const asmProductoRepository: IAsmProductoRepository = {
+      obtenerProductos: jest.fn().mockRejectedValue(new Error('ASM timeout')),
+      buscarProductosCrudo: jest.fn(),
+    };
+
+    const useCase = new ObtenerProductosSuspensionUseCase({
+      ramosProductoRepository,
+      asmProductoRepository,
+    });
+
+    await expect(useCase.execute(params)).rejects.toThrow('Todos los servicios fallaron');
+  });
+
   it('should throw when rubroId has no equivalencia', async () => {
     const ramosProductoRepository: IRamosProductoRepository = {
       obtenerProductos: jest.fn(),
