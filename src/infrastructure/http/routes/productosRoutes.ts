@@ -8,4 +8,5 @@ export async function productosRoutes(
   fastify.post('/productos', controller.buscarProductos.bind(controller));
   fastify.post('/productos/ramos', controller.buscarProductosRamos.bind(controller));
   fastify.post('/productos/asm', controller.buscarProductosAsm.bind(controller));
+  fastify.get('/productos/ov', controller.buscarProductosOV.bind(controller));
 }

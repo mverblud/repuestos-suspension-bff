@@ -1,0 +1,434 @@
+[
+  {
+    "codigo": "IR0812STG",
+    "ubicacion": "A1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "IRAUTO",
+    "aplicacion": "AMO PEU PARTNER 98>, P306 93>, CIT BERLINGO, XSARA/ PICASSO, ZX/ BREAK, C15 DEL . EQUIV: SDR60087O, CORVEN: 34327G, SACHS: 316 224, F ROT: 44458MX, MONROE: 808630IMM, NAKATA: HG33054D, COFAP: AT484458Z"
+  },
+  {
+    "codigo": "SDR60057O",
+    "ubicacion": "A1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO FORD FIESTA MAX 03> DEL .GAS / HID.: GAS, ABIERTO: 500, CERRADO: 336, POSICION TRABA: 440, ANCLAJE: MCP, MEDIDA SUPERIOR: ESTRUCTURA, MEDIDA INFERIOR: ESTRUCTURA, EQUIV. FRIC ROT: 94163, EQUIV. SACHS: 3009G, EQUIV. CORVEN: 34383G"
+  },
+  {
+    "codigo": "IR0827",
+    "ubicacion": "A1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "IRAUTO",
+    "aplicacion": "AMO VW GOL AB9/ POWER/ TREND, VOYAGE TRAS . EQUIV:"
+  },
+  {
+    "codigo": "SDR60061",
+    "ubicacion": "A1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO FORD ECOSPORT 4X2 03>11 DEL ."
+  },
+  {
+    "codigo": "SDR60265",
+    "ubicacion": "A1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO TOY ETIOS 10> DEL"
+  },
+  {
+    "codigo": "SDR65088",
+    "ubicacion": "A2",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO VW FOX, SURAN 06>, GOL TREND 07>, VOYAGE 04> D"
+  },
+  {
+    "codigo": "SDR60029",
+    "ubicacion": "A2",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO REN KANGOO 99>13 DEL ."
+  },
+  {
+    "codigo": "SDR10516",
+    "ubicacion": "A2",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO FORD ECOSPORT KINETIC 12> TRAS"
+  },
+  {
+    "codigo": "SDR10511",
+    "ubicacion": "A2",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO CHEV SONIC, ONIX, PRISMA, COBALT 13> TRAS"
+  },
+  {
+    "codigo": "SDR10034",
+    "ubicacion": "A2",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO CHEV ASTRA 98> TRAS"
+  },
+  {
+    "codigo": "SDR10327",
+    "ubicacion": "A2",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO REN LOGAN, SANDERO 08> TRAS ."
+  },
+  {
+    "codigo": "SDR10328",
+    "ubicacion": "A2",
+    "stock": 1,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO REN KANGOO 99> TRAS ."
+  },
+  {
+    "codigo": "SDR10212",
+    "ubicacion": "A2",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO CHEV MERIVA, ZAFIRA 04>, VECTRA 06> TRAS"
+  },
+  {
+    "codigo": "SDR10108",
+    "ubicacion": "A2",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO FORD FIESTA MAX 02> TRAS ."
+  },
+  {
+    "codigo": "IR0811",
+    "ubicacion": "A2",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "IRAUTO",
+    "aplicacion": "AMO REN KANGOO 99> TRAS . EQUIV: SDR10328O, CORVEN"
+  },
+  {
+    "codigo": "SDR10202",
+    "ubicacion": "A2",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO PEU P206 99>, P207 TRAS ."
+  },
+  {
+    "codigo": "SDR10184",
+    "ubicacion": "A2",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO CORSA /WAGON /CLASSIC, CORSA II 02>, CELTA 11>"
+  },
+  {
+    "codigo": "IR0818",
+    "ubicacion": "A2",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "IRAUTO",
+    "aplicacion": "AMO REN CLIO II, SYMBOL 09> TRAS . EQUIV: SDR10028"
+  },
+  {
+    "codigo": "SDR10028",
+    "ubicacion": "A2",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO REN CLIO II, SYMBOL 09> TRAS ."
+  },
+  {
+    "codigo": "SDR20008",
+    "ubicacion": "A2",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO VW GOL AB9/ POWER/ TREND, VOYAGE 04> TRAS ."
+  },
+  {
+    "codigo": "IR0823",
+    "ubicacion": "A3",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "IRAUTO",
+    "aplicacion": "AMO VW FOX, SURAN 06>, GOL TREND 07>, VOYAGE 04> D"
+  },
+  {
+    "codigo": "SDR60116",
+    "ubicacion": "A3",
+    "stock": 1,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO FORD FIESTA KINETIC 10> DER DEL ."
+  },
+  {
+    "codigo": "SDR60117",
+    "ubicacion": "A3",
+    "stock": 1,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO FORD FIESTA KINETIC 10> IZQ DEL ."
+  },
+  {
+    "codigo": "SDR60060",
+    "ubicacion": "A4",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO FIAT PALIO /WEEKEND, SIENA S/ABS 01> (FIRE) DE"
+  },
+  {
+    "codigo": "SDR60095",
+    "ubicacion": "A4",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO FIAT PALIO LOCKER - STRADA ADVENTURE 09> DEL"
+  },
+  {
+    "codigo": "SDR60016",
+    "ubicacion": "A4",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO FIAT DUNA, UNO, FIORINO /UNO DEL (=60008O) ."
+  },
+  {
+    "codigo": "IR0821",
+    "ubicacion": "B1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "IRAUTO",
+    "aplicacion": "AMO FIAT PALIO - SIENA 97>13 TRAS . EQUIV: SDR1001"
+  },
+  {
+    "codigo": "IR0790",
+    "ubicacion": "B1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "IRAUTO",
+    "aplicacion": "AMO CIT C4 LOUNGE, PEU P308, P408 11> TRAS . EQUIV"
+  },
+  {
+    "codigo": "SDR10011",
+    "ubicacion": "B1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO FIAT PALIO, SIENA (TODOS) 97>13 TRAS ."
+  },
+  {
+    "codigo": "SDR50008",
+    "ubicacion": "B1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO GALAXY 92>, VW GACEL, SENDA, SAVEIRO, GOL 83>1"
+  },
+  {
+    "codigo": "SDR20001",
+    "ubicacion": "B1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO VW GACEL, GOL / GTI <95, SENDA TRAS"
+  },
+  {
+    "codigo": "SDR60055",
+    "ubicacion": "B1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO CHEV CORSA II 02>, MERIVA 04> DEL DER (ANTES 6"
+  },
+  {
+    "codigo": "SDR10328",
+    "ubicacion": "B1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO REN KANGOO 99> TRAS ."
+  },
+  {
+    "codigo": "IR0824",
+    "ubicacion": "C1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "IRAUTO",
+    "aplicacion": "AMO GALAXY, VW GACEL, SENDA, SAVEIRO, GOL 83>15/ C"
+  },
+  {
+    "codigo": "SDR10227",
+    "ubicacion": "C1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO VW BORA, GOLF IV, NEW BEETLE, AUDI A3 97>, SEA"
+  },
+  {
+    "codigo": "SDR10323",
+    "ubicacion": "C1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO VW FOX, SURAN 07> TRAS ."
+  },
+  {
+    "codigo": "SDR10372",
+    "ubicacion": "C1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO FORD KA 15>, FIESTA KINETIC 10> TRAS ."
+  },
+  {
+    "codigo": "GB480434",
+    "ubicacion": "C1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "COFAP",
+    "aplicacion": ""
+  },
+  {
+    "codigo": "SDR10417",
+    "ubicacion": "C1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO NIS TIIDA TRAS"
+  },
+  {
+    "codigo": "SDR60112",
+    "ubicacion": "C1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO PEU P206, P207 IZQ DEL ."
+  },
+  {
+    "codigo": "IR0820",
+    "ubicacion": "C1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "IRAUTO",
+    "aplicacion": "AMO CIT BERLINGO 98>, PEU PARTNER 98> TRAS . EQUIV"
+  },
+  {
+    "codigo": "SDR10519",
+    "ubicacion": "C1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO TOY ETIOS 10> TRAS"
+  },
+  {
+    "codigo": "SDR60043",
+    "ubicacion": "C1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO VW BORA 00>, GOLF IV, NEW BEETLE 99> DEL"
+  },
+  {
+    "codigo": "SDR60023",
+    "ubicacion": "D1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO CHEV CORSA /CLASSIC, CELTA, TIGRA, SUZ FUN 04>"
+  },
+  {
+    "codigo": "SDR60090",
+    "ubicacion": "D1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO REN LOGAN, SANDERO 07>13 DEL ."
+  },
+  {
+    "codigo": "SDR60256",
+    "ubicacion": "D1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO CHEV SONIC, ONIX, SPIN, PRISMA 13> DEL DER"
+  },
+  {
+    "codigo": "SDR60089",
+    "ubicacion": "D1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO REN CLIO II 1.0 / 1.2 04>11 DEL ."
+  },
+  {
+    "codigo": "SDR60023",
+    "ubicacion": "E1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO CHEV CORSA /CLASSIC, CELTA, TIGRA, SUZ FUN 04>"
+  },
+  {
+    "codigo": "ST0070",
+    "ubicacion": "E1",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SIN MARCA",
+    "aplicacion": ""
+  },
+  {
+    "codigo": "SDR60301",
+    "ubicacion": "E2",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO REN LOGAN, SANDERO 13> DEL"
+  },
+  {
+    "codigo": "SDR60250",
+    "ubicacion": "E2",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO REN KANGOO 13> DEL"
+  },
+  {
+    "codigo": "SDR60241",
+    "ubicacion": "E2",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO REN CLIO MIO 13> DEL"
+  },
+  {
+    "codigo": "SDR60239",
+    "ubicacion": "F3",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO FIAT UNO NOVO, GRAND SIENA, PALIO EVO DER DEL"
+  },
+  {
+    "codigo": "IR0787",
+    "ubicacion": "F3",
+    "stock": 2,
+    "categoria": "AMORTIGUADOR",
+    "marca": "IRAUTO",
+    "aplicacion": "AMO REN CLIO II 1.5/ 1.6, SYMBOL 09> DEL . EQUIV:"
+  }
+]

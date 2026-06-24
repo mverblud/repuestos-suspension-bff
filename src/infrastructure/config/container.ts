@@ -10,8 +10,10 @@ import { MarcaAdapter } from '../adapters/MarcaAdapter';
 import { ModeloAdapter } from '../adapters/ModeloAdapter';
 import { AuthService } from '../adapters/AuthService';
 import { CatalogoAdapter } from '../adapters/CatalogoAdapter';
+import { OVProductoAdapter } from '../adapters/OVProductoAdapter';
 import { ObtenerProductosSuspensionUseCase } from '../../application/use-cases/ObtenerProductosSuspensionUseCase';
 import { ObtenerProductosRamosUseCase } from '../../application/use-cases/ObtenerProductosRamosUseCase';
+import { ObtenerProductosOVUseCase } from '../../application/use-cases/ObtenerProductosOVUseCase';
 import { ObtenerProductosAsmUseCase } from '../../application/use-cases/ObtenerProductosAsmUseCase';
 import { ObtenerRubrosUseCase } from '../../application/use-cases/ObtenerRubrosUseCase';
 import { ObtenerAutosUseCase } from '../../application/use-cases/ObtenerAutosUseCase';
@@ -53,7 +55,9 @@ interface Cradle {
   marcaRepository: MarcaAdapter;
   modeloRepository: ModeloAdapter;
   catalogoRepository: CatalogoAdapter;
+  ovProductoRepository: OVProductoAdapter;
   obtenerProductosUseCase: ObtenerProductosSuspensionUseCase;
+  obtenerProductosOVUseCase: ObtenerProductosOVUseCase;
   obtenerProductosRamosUseCase: ObtenerProductosRamosUseCase;
   obtenerProductosAsmUseCase: ObtenerProductosAsmUseCase;
   obtenerRubrosUseCase: ObtenerRubrosUseCase;
@@ -97,7 +101,9 @@ export function buildContainer(): AwilixContainer<Cradle> {
     marcaRepository: asClass(MarcaAdapter).singleton(),
     modeloRepository: asClass(ModeloAdapter).singleton(),
     catalogoRepository: asClass(CatalogoAdapter).singleton(),
+    ovProductoRepository: asClass(OVProductoAdapter).singleton(),
     obtenerProductosUseCase: asClass(ObtenerProductosSuspensionUseCase).singleton(),
+    obtenerProductosOVUseCase: asClass(ObtenerProductosOVUseCase).singleton(),
     obtenerProductosRamosUseCase: asClass(ObtenerProductosRamosUseCase).singleton(),
     obtenerProductosAsmUseCase: asClass(ObtenerProductosAsmUseCase).singleton(),
     obtenerRubrosUseCase: asClass(ObtenerRubrosUseCase).singleton(),
