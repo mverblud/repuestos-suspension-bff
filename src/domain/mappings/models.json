@@ -93,6 +93,9 @@
   { "id": "fiat-toro",                 "brandId": "fiat",         "name": "Toro",             "enabled": true },
   { "id": "fiat-doblo",                "brandId": "fiat",         "name": "Doblo",            "enabled": true },
   { "id": "fiat-uno",                  "brandId": "fiat",         "name": "Uno",              "enabled": true },
+  { "id": "fiat-duna",                 "brandId": "fiat",         "name": "Duna",             "enabled": true },
+  { "id": "fiat-125",                  "brandId": "fiat",         "name": "125",             "enabled": true },
+  { "id": "fiat-147",                  "brandId": "fiat",         "name": "147",             "enabled": true },
 
   { "id": "ford-bronco",               "brandId": "ford",         "name": "Bronco",           "enabled": true },
   { "id": "ford-bronco-sport",         "brandId": "ford",         "name": "Bronco Sport",     "enabled": true },
@@ -108,6 +111,7 @@
   { "id": "ford-ranger",              "brandId": "ford",         "name": "Ranger",           "enabled": true },
   { "id": "ford-territory",           "brandId": "ford",         "name": "Territory",        "enabled": true },
   { "id": "ford-transit",             "brandId": "ford",         "name": "Transit",          "enabled": true },
+  { "id": "ford-falcon",              "brandId": "ford",         "name": "Falcon",          "enabled": true },
 
   { "id": "gwm-haval-h6",             "brandId": "gwm",          "name": "Haval H6",         "enabled": true },
   { "id": "gwm-ora-03",               "brandId": "gwm",          "name": "ORA 03",           "enabled": true },
