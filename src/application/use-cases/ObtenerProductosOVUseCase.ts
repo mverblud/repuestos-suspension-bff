@@ -3,7 +3,7 @@ import type { IOVProductoRepository } from '../ports/IOVProductoRepository';
 import type { IRamosProductoRepository } from '../ports/IRamosProductoRepository';
 import type { ProductoOVEnriquecido } from '../../domain/models/ProductoOV';
 
-const MARCAS_RM = new Set(['SADAR', 'IRAUTO']);
+const MARCAS_RM = new Set(['SADAR', 'IRAUTO','ROLL','DIMET','DS','CORVEN']);
 
 function extractNumerico(codigo: string): string {
   return codigo.match(/\d+/)?.[0] ?? '';

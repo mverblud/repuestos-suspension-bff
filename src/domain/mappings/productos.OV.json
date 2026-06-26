@@ -160,16 +160,8 @@
     "aplicacion": "AMO VW GOL AB9/ POWER/ TREND, VOYAGE 04> TRAS ."
   },
   {
-    "codigo": "IR0823",
-    "ubicacion": "A3",
-    "stock": 2,
-    "categoria": "AMORTIGUADOR",
-    "marca": "IRAUTO",
-    "aplicacion": "AMO VW FOX, SURAN 06>, GOL TREND 07>, VOYAGE 04> D"
-  },
-  {
     "codigo": "SDR60116",
-    "ubicacion": "A3",
+    "ubicacion": "A4",
     "stock": 1,
     "categoria": "AMORTIGUADOR",
     "marca": "SADAR",
@@ -177,7 +169,7 @@
   },
   {
     "codigo": "SDR60117",
-    "ubicacion": "A3",
+    "ubicacion": "A4",
     "stock": 1,
     "categoria": "AMORTIGUADOR",
     "marca": "SADAR",
@@ -301,7 +293,7 @@
     "stock": 2,
     "categoria": "AMORTIGUADOR",
     "marca": "COFAP",
-    "aplicacion": ""
+    "aplicacion": "AMORTIGUADOR COFAP TRASERO GAS CHEVROLET AGILE 1.4 09-17 OEM SA315224 / 315224 / HG31151 / 42710G / 83839 - Chevrolet Agile 1.4 Ls 2013 - Chevrolet Agile 1.4 Ls 2017"
   },
   {
     "codigo": "SDR10417",
@@ -362,10 +354,18 @@
   {
     "codigo": "SDR60256",
     "ubicacion": "D1",
-    "stock": 2,
+    "stock": 1,
     "categoria": "AMORTIGUADOR",
     "marca": "SADAR",
     "aplicacion": "AMO CHEV SONIC, ONIX, SPIN, PRISMA 13> DEL DER"
+  },
+  {
+    "codigo": "SDR60257",
+    "ubicacion": "D1",
+    "stock": 1,
+    "categoria": "AMORTIGUADOR",
+    "marca": "SADAR",
+    "aplicacion": "AMO CHEV SONIC, ONIX, SPIN, PRISMA 13> DEL IZQ"
   },
   {
     "codigo": "SDR60089",
@@ -384,12 +384,12 @@
     "aplicacion": "AMO CHEV CORSA /CLASSIC, CELTA, TIGRA, SUZ FUN 04>"
   },
   {
-    "codigo": "ST0070",
+    "codigo": "SA0224G",
     "ubicacion": "E1",
     "stock": 2,
     "categoria": "AMORTIGUADOR",
-    "marca": "SIN MARCA",
-    "aplicacion": ""
+    "marca": "LIP",
+    "aplicacion": "CHEVROLET CORSA CLASSIC - II TODOS TRASERO"
   },
   {
     "codigo": "SDR60301",
@@ -417,7 +417,7 @@
   },
   {
     "codigo": "SDR60239",
-    "ubicacion": "F3",
+    "ubicacion": "E3",
     "stock": 2,
     "categoria": "AMORTIGUADOR",
     "marca": "SADAR",
@@ -425,10 +425,538 @@
   },
   {
     "codigo": "IR0787",
-    "ubicacion": "F3",
+    "ubicacion": "E3",
     "stock": 2,
     "categoria": "AMORTIGUADOR",
     "marca": "IRAUTO",
     "aplicacion": "AMO REN CLIO II 1.5/ 1.6, SYMBOL 09> DEL . EQUIV:"
+  },
+  {
+    "codigo": "HM902",
+    "ubicacion": "A3",
+    "stock": 1,
+    "categoria": "JUNTA HOMOCINETICA",
+    "marca": "ROLL",
+    "aplicacion": "Gol 1.8 / Carat / Senda / Gacel"
+  },
+  {
+    "codigo": "CHM924NM",
+    "ubicacion": "A3",
+    "stock": 1,
+    "categoria": "JUNTA HOMOCINETICA",
+    "marca": "ROLL",
+    "aplicacion": "Corsa"
+  },
+  {
+    "codigo": "HM901",
+    "ubicacion": "A3",
+    "stock": 2,
+    "categoria": "JUNTA HOMOCINETICA",
+    "marca": "ROLL",
+    "aplicacion": "Gacel 1600"
+  },
+  {
+    "codigo": "HM952",
+    "ubicacion": "A3",
+    "stock": 1,
+    "categoria": "JUNTA HOMOCINETICA",
+    "marca": "ROLL",
+    "aplicacion": "Renault 12"
+  },
+  {
+    "codigo": "HM940",
+    "ubicacion": "A3",
+    "stock": 1,
+    "categoria": "JUNTA HOMOCINETICA",
+    "marca": "ROLL",
+    "aplicacion": "Peugeot 405 / Partner / Berlingo"
+  },
+  {
+    "codigo": "CBH1408",
+    "ubicacion": "A3",
+    "stock": 1,
+    "categoria": "JUNTA HOMOCINETICA",
+    "marca": "ROLL",
+    "aplicacion": "Renault 19"
+  },
+  {
+    "codigo": "DMT1751",
+    "ubicacion": "B2",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "DIMET",
+    "aplicacion": "Renault Clio"
+  },
+  {
+    "codigo": "DMT1752",
+    "ubicacion": "B2",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "DIMET",
+    "aplicacion": "Renault Clio"
+  },
+  {
+    "codigo": "DMT1759",
+    "ubicacion": "B2",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Logan / Sandero"
+  },
+  {
+    "codigo": "DMT1760",
+    "ubicacion": "B2",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "DIMET",
+    "aplicacion": "Megane / Scenic"
+  },
+  {
+    "codigo": "DMT1761",
+    "ubicacion": "B2",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "DIMET",
+    "aplicacion": "Megane / Scenic"
+  },
+  {
+    "codigo": "DMT1762",
+    "ubicacion": "B2",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "DIMET",
+    "aplicacion": "Megane / Scenic"
+  },
+  {
+    "codigo": "DMT1767",
+    "ubicacion": "B2",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Fluence / Megane III"
+  },
+  {
+    "codigo": "DSM1510",
+    "ubicacion": "B2",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "DS",
+    "aplicacion": "Peugeot 206 Derecho"
+  },
+  {
+    "codigo": "DSM1511",
+    "ubicacion": "B2",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "DS",
+    "aplicacion": "Peugeot 206 Izquierdo"
+  },
+  {
+    "codigo": "DSM1505",
+    "ubicacion": "B2",
+    "stock": 2,
+    "categoria": "ROTULA",
+    "marca": "DS",
+    "aplicacion": "Peugeot 504 GR / 505"
+  },
+  {
+    "codigo": "DSM1600",
+    "ubicacion": "B2",
+    "stock": 3,
+    "categoria": "ROTULA",
+    "marca": "DS",
+    "aplicacion": "Renault 19 / Kangoo"
+  },
+  {
+    "codigo": "DSM1601",
+    "ubicacion": "B2",
+    "stock": 2,
+    "categoria": "ROTULA",
+    "marca": "DS",
+    "aplicacion": "Renault 9 / 11 / Symbol"
+  },
+  {
+    "codigo": "DSM1605",
+    "ubicacion": "B2",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "DS",
+    "aplicacion": "Renault 9 / 11 / Express"
+  },
+  {
+    "codigo": "RE4407",
+    "ubicacion": "B2",
+    "stock": 1,
+    "categoria": "ROTULA DIRECCION",
+    "marca": "LSP",
+    "aplicacion": "Rotula Renault 12 Inferior"
+  },
+  {
+    "codigo": "RE9411",
+    "ubicacion": "B2",
+    "stock": 1,
+    "categoria": "ROTULA DIRECCION",
+    "marca": "LSP",
+    "aplicacion": "Rotula Renault Trafic"
+  },
+  {
+    "codigo": "DSM1634",
+    "ubicacion": "A3",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DS",
+    "aplicacion": "Renault Duster / Oroch"
+  },
+  {
+    "codigo": "DMT9734",
+    "ubicacion": "A3",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Toyota Etios"
+  },
+  {
+    "codigo": "DMT9732",
+    "ubicacion": "A3",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "DIMET",
+    "aplicacion": "Toyota Etios"
+  },
+  {
+    "codigo": "5RT9176",
+    "ubicacion": "A3",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "CORVEN",
+    "aplicacion": "Renault Duster / Captur"
+  },
+  {
+    "codigo": "5RT9175",
+    "ubicacion": "A3",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "CORVEN",
+    "aplicacion": "Renault Duster / Captur"
+  },
+  {
+    "codigo": "DMT2816",
+    "ubicacion": "B2",
+    "stock": 2,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Fiat Palio / Siena / Strada"
+  },
+  {
+    "codigo": "DMT2815",
+    "ubicacion": "B2",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Fiat Palio / Siena"
+  },
+  {
+    "codigo": "DMT2808",
+    "ubicacion": "B2",
+    "stock": 2,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Fiat Palio"
+  },
+  {
+    "codigo": "DMT2830",
+    "ubicacion": "B2",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Fiat Punto / Linea"
+  },
+  {
+    "codigo": "DMT9669",
+    "ubicacion": "B2",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Peugeot 208"
+  },
+  {
+    "codigo": "DMT9409",
+    "ubicacion": "",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "DIMET",
+    "aplicacion": "Chevrolet Meriva / Montana"
+  },
+  {
+    "codigo": "DMT9410",
+    "ubicacion": "",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Chevrolet Corsa II"
+  },
+  {
+    "codigo": "DMT9411",
+    "ubicacion": "",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Chevrolet Meriva"
+  },
+  {
+    "codigo": "DMT9316",
+    "ubicacion": "",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Chevrolet S10 / Blazer"
+  },
+  {
+    "codigo": "DMT9322",
+    "ubicacion": "",
+    "stock": 1,
+    "categoria": "BRAZO AUXILIAR",
+    "marca": "DIMET",
+    "aplicacion": "Chevrolet C10 Silverado"
+  },
+  {
+    "codigo": "7711",
+    "ubicacion": "",
+    "stock": 2,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "LOGANE",
+    "aplicacion": "Peugeot 504 Derecho"
+  },
+  {
+    "codigo": "DSM1691",
+    "ubicacion": "B3",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DS",
+    "aplicacion": "Fiat Palio"
+  },
+  {
+    "codigo": "DSM1690",
+    "ubicacion": "B3",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DS",
+    "aplicacion": "Fiat Palio"
+  },
+  {
+    "codigo": "DSM1678",
+    "ubicacion": "B3",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DS",
+    "aplicacion": "Fiat Idea Izquierda"
+  },
+  {
+    "codigo": "DSM1677",
+    "ubicacion": "B3",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DS",
+    "aplicacion": "Fiat Idea Derecha"
+  },
+  {
+    "codigo": "DSM1660",
+    "ubicacion": "B3",
+    "stock": 2,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "DS",
+    "aplicacion": "Fiat Duna / Uno"
+  },
+  {
+    "codigo": "DMT2302",
+    "ubicacion": "B3",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "DIMET",
+    "aplicacion": "Fiat 600"
+  },
+  {
+    "codigo": "DMT2812",
+    "ubicacion": "B3",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Fiat Ducato Maxi / Peugeot Boxer"
+  },
+  {
+    "codigo": "DMT2816",
+    "ubicacion": "B3",
+    "stock": 2,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Fiat Palio / Siena / Strada"
+  },
+  {
+    "codigo": "DMT2815",
+    "ubicacion": "B3",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Fiat Palio / Siena"
+  },
+  {
+    "codigo": "DMT2808",
+    "ubicacion": "B3",
+    "stock": 2,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Fiat Palio"
+  },
+  {
+    "codigo": "DMT2830",
+    "ubicacion": "B3",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Fiat Punto / Linea"
+  },
+  {
+    "codigo": "DMT2500",
+    "ubicacion": "B3",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "DIMET",
+    "aplicacion": "Peugeot 405"
+  },
+  {
+    "codigo": "DMT9615",
+    "ubicacion": "B3",
+    "stock": 2,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Peugeot Boxer / Citroen Jumper"
+  },
+  {
+    "codigo": "DMT9617",
+    "ubicacion": "B3",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "DIMET",
+    "aplicacion": "Citroen Xsara"
+  },
+  {
+    "codigo": "DMT9669",
+    "ubicacion": "B3",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Peugeot 208"
+  },
+  {
+    "codigo": "5RT1280",
+    "ubicacion": "B3",
+    "stock": 2,
+    "categoria": "ROTULA",
+    "marca": "CORVEN",
+    "aplicacion": ""
+  },
+  {
+    "codigo": "BJ1252",
+    "ubicacion": "B3",
+    "stock": 2,
+    "categoria": "ROTULA",
+    "marca": "SADAR",
+    "aplicacion": ""
+  },
+  {
+    "codigo": "MC1366",
+    "ubicacion": "B3",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "MC",
+    "aplicacion": ""
+  },
+  {
+    "codigo": "88-12",
+    "ubicacion": "B3",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "LOGANE",
+    "aplicacion": "Peugeot 405"
+  },
+  {
+    "codigo": "9302",
+    "ubicacion": "B4",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "DIMET",
+    "aplicacion": "Chevrolet Corsa"
+  },
+  {
+    "codigo": "9322",
+    "ubicacion": "B4",
+    "stock": 1,
+    "categoria": "BRAZO AUXILIAR",
+    "marca": "DIMET",
+    "aplicacion": "Chevrolet C10 Silverado"
+  },
+  {
+    "codigo": "9409",
+    "ubicacion": "B4",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "DIMET",
+    "aplicacion": "Chevrolet Meriva / Montana"
+  },
+  {
+    "codigo": "9410",
+    "ubicacion": "B4",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Chevrolet Corsa II"
+  },
+  {
+    "codigo": "9411",
+    "ubicacion": "B4",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Chevrolet Meriva"
+  },
+  {
+    "codigo": "9316",
+    "ubicacion": "B4",
+    "stock": 1,
+    "categoria": "ROTULA",
+    "marca": "DIMET",
+    "aplicacion": "Chevrolet S10 / Blazer"
+  },
+  {
+    "codigo": "PS0232",
+    "ubicacion": "B4",
+    "stock": 2,
+    "categoria": "ROTULA",
+    "marca": "THOMPSON",
+    "aplicacion": "Chevrolet C10 / C20"
+  },
+  {
+    "codigo": "1149",
+    "ubicacion": "B4",
+    "stock": 1,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "ARUCCI",
+    "aplicacion": "Pick-Up C20"
+  },
+  {
+    "codigo": "7711",
+    "ubicacion": "B4",
+    "stock": 2,
+    "categoria": "EXTREMO DIRECCION",
+    "marca": "LOGANE",
+    "aplicacion": "Peugeot 504 Derecho"
+  },
+  {
+    "codigo": "BJ1379A",
+    "ubicacion": "B4",
+    "stock": 2,
+    "categoria": "ROTULA",
+    "marca": "SADAR",
+    "aplicacion": ""
   }
 ]
